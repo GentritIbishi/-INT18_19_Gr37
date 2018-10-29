@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simplicity</title>
+	<h2>SIMPLICITY</h2>
+	<h5>Free PSD Template</h5>
+</head>
+<body>
+<img src="simple.jpg"alt="Simple image of a sign"width="420px"height="320px">
+<h3><strong>LIPSUM</strong></h3>       
+<p>Nullamaclus dui ipsum conseqlo</p>  
+<p>borttis non euisique morbipen a</p>
+<p>sdabipulum orna</p>
+
+
+
+<hr>
+<img src="simple1.jpg"alt="simple image"width="200"height="200"><img src="simple1.jpg"alt="simple image"width="200"height="200"><img src="simple1.jpg"alt="simple image"width="200"height="200">
+
+
+
+</body>
+</html>
