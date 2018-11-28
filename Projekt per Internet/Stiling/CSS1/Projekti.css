@@ -1,4 +1,3 @@
-
 body{
 font-family:Garamond,serif;
 font-size: 20px;
@@ -29,7 +28,7 @@ margin-top: 5px;
 	position:absolute;
 	top:20px;
 	left:300px;
-	border-left:solid 1px;
+	border-left:solid 2px;
 	
 }
 .box-2{
@@ -37,19 +36,25 @@ margin-top: 5px;
 }
 .box-2 h1{
 	float:right;
-	padding-right: 350px;
+	padding-right: 120px;
 	padding-top: 160px;
 	font-size: 36px;
+	width:50%;
 	color:#F8F8FF;
-	border-bottom: solid 2px;
+	border-bottom: solid 1px;
 	box-sizing: border-box;
+}
+.box-2 img{
+	width:40%;
 }
 .box-2 p{
 	
-	width: 25%;
+	
 	padding-left :500px;
-	float: top;
+	float:top;
 	padding-bottom:20px;
+	box-sizing: border-box;
+
 }
 .block{
 float:right;
@@ -68,5 +73,21 @@ box-sizing: border-box;
 	width:20%;
 	box-sizing: border-box;
 	padding:10px;
+	padding-bottom :50px;
+
+}
+.About_mes h3{
+	border-bottom:solid 1px;
+	border-color: #5F9EA0;
+	width:70%;
+}
+.About_mes p{
+	width:70%;
+}
+.Bllok_Fundit h3{
+	float: right;
+	color:brown;
+	border-bottom: solid 1px;
+	width:33.3%;
 
 }
