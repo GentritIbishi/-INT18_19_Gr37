@@ -83,3 +83,15 @@ padding-top:80px;
   box-sizing:border-box;
   padding:15px;
 }
+.middle h3{
+  border-bottom: solid 2px;
+  border-color:#669999;
+}
+
+.images img{
+	float:right;
+	width:25%;
+  box-sizing: border-box;
+  padding:25px;
+  border:solid 1px;
+}
