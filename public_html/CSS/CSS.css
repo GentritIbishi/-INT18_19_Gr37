@@ -40,7 +40,7 @@
 
 html { font-size: 62.5%; }
 
-body { 
+body {
   background-color: white;
   margin: 0;
   font-size: 1.8rem;
@@ -109,37 +109,60 @@ main img{
 float:right;
 width:50%;
 padding-top:80px;
-font-size:20px;
+font-size:18px;
 color:white;
 }
 .paragraph h2{
   color:white;
   border-bottom: solid 1px;
   border-color: #a4c4ca;
-  font-size:45px;
+  font-size:42px;
 }
+.paragraph h3{
+  color: #305f66;
+  font-size: 20px;
+  padding: 24px;
+  border-width: 450px;
+  border-height: 30px;
+  border: solid 1px #aecad0;
+  font-family: Georgia;
+}
+
+.paragraph h3 a:link {
+    text-decoration: none;
+    padding: 62px;
+    font-size: 50px;
+    color: #26575e;
+}
+
 .middle{
   float:right;
   color:black;
   width:25%;
   box-sizing:border-box;
-  padding:55px;
+  padding:50px;
 }
 .middle h3{
   border-bottom: solid 2px;
-  border-color:#669999;
+  border-color:#96b7be;
 }
 .image-container img{
-  width:24.5%;
+  margin-left: 52px;
   display:inline-block;
-  border:solid 1px;
-
+  width:20.5%;
+  border:solid 2px;
+  border-color: #96b7be;
 }
 #lower-title h2{
   float:left;
   border-bottom:solid 1px;
   width:50%;
   
+}
+
+.content img {
+    padding: 0.25em;
+    border: solid 2px #82afb5;
 }
 .lower-title p{
   float:left;
