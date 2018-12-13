@@ -1,0 +1,260 @@
+.social-bar {
+  
+    background-color: #cbdde1;
+    height: 35px;
+    width: 100%;
+    z-index: 99;
+    
+    }
+    
+    .social-icons {
+    margin-top:-3px;
+    color: white;
+    float: right;
+    }
+    
+    .social-icons li {
+    display: inline-block;
+    margin-right: 15px;
+    margin-top: 10px;
+    
+    font-size: 18px;
+    transition: all 1s;
+    }
+    
+    .social-icons li:last-child {
+    margin-right: 100px;
+    }
+    
+    .social-icons li:hover {
+    color: #888;
+    cursor: pointer;
+    }
+    * {
+    margin: 0;
+    padding: 0px;
+    }
+  @import url('https://fonts.googleapis.com/css?family=PT+Sans');
+  
+  * { box-sizing: border-box; }
+  
+  html { font-size: 62.5%; }
+  
+  body {
+    background-color:white;
+    margin: 0;
+    font-size: 1.8rem;
+    font-family: 'PT Sans', sans-serif;
+  }
+  
+  .main-header {
+    
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 6rem;
+    color: white;
+    background: #96b7be;
+    line-height: 6rem;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+    transition: .25s transform;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+  }
+  
+  .heads-up {
+    -webkit-transform: translateY(-6rem);
+            transform: translateY(-6rem);
+    -webkit-transform: translate3d(0,-6rem,0);
+            transform: translate3d(0,-6rem,0);
+  }
+  
+  .main-header h1 {
+    float: left;
+    font-size: 2.5rem;
+    margin: 0 0 0 2rem;
+    text-transform: uppercase;
+  }
+  
+  .main-header nav {
+    float: right;
+    font-size: 1.4rem;
+  }
+  
+  .main-header nav ul { 
+    margin: 0; 
+    padding: 0; 
+  }
+  .main-header a{
+  color:white;
+  text-decoration:none;
+  }
+  .main-header a:hover {
+    color: #888;
+    cursor: pointer;
+    transition: all 1s;
+    }
+  .main-header nav li {
+    display: inline-block;
+    padding: 0 2rem;
+    border-left: .1rem solid black;
+  }
+  
+  main { 
+    padding: 10rem 6rem;
+    background: #cbdde1; 
+    width:100%;
+  }
+
+  @import url(https://fonts.googleapis.com/css?family=Montserrat);
+  @import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+  @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+  .snip1568 {
+    font-family: 'Open Sans', Arial, sans-serif;
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+    min-width: 230px;
+    max-width: 315px;
+    width: 100%;
+    color: black;
+    text-align: left;
+    line-height: 1.4em;
+    font-size: 14px;
+    box-shadow: none !important;
+    left:250px;
+    top:100px;
+  }
+  
+  .snip1568 * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  .snip1568 .profile-image img {
+    border-radius: 5px;
+    max-width: 100%;
+    height: 80px;
+    vertical-align: top;
+    float: left;
+  }
+  
+  .snip1568 figcaption {
+    width: 100%;
+    background-color: #96b7be;
+    color: #fff;
+    padding: 25px;
+    display: inline-block;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    position: relative;
+  }
+  
+  .snip1568 figcaption:after {
+    content: '';
+    position: absolute;
+    left: 32px;
+    top: 100%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 10px 0 10px;
+    border-color: #333333 transparent transparent transparent;
+  }
+  
+  .snip1568 h3,
+  .snip1568 h4,
+  .snip1568 p {
+    margin: 0 0 5px;
+  }
+  
+  .snip1568 h3 {
+    font-weight: 600;
+    font-size: 1.2em;
+    font-family: 'Montserrat', Arial, sans-serif;
+  }
+  
+  .snip1568 h4 {
+    color: #8c8c8c;
+    font-weight: 400;
+    letter-spacing: 2px;
+  }
+  
+  .snip1568 p {
+    font-size: 0.9em;
+    letter-spacing: 1px;
+    opacity: 0.9;
+  }
+  
+  .snip1568 .icons {
+    padding: 20px 90px;
+  }
+  
+  .snip1568 i {
+    padding: 10px 2px;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: normal;
+    color: black;
+    opacity: 0.75;
+  }
+
+  .snip1568 i:hover {
+    opacity: 1;
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+  }
+  
+  /* Demo purposes only */
+  body {
+    background-color: #cbdde1;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    background-color: #0c5e2e;
+    text-align: center;
+    color:white;
+  } 
