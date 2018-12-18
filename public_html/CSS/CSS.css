@@ -1,31 +1,31 @@
 .social-bar {
-  
+
   background-color: #cbdde1;
   height: 35px;
   width: 100%;
   z-index: 99;
-  
+
   }
-  
+
   .social-icons {
   margin-top:-3px;
   color: white;
   float: right;
   }
-  
+
   .social-icons li {
   display: inline-block;
   margin-right: 15px;
   margin-top: 10px;
-  
+
   font-size: 18px;
   transition: all 1s;
   }
-  
+
   .social-icons li:last-child {
   margin-right: 100px;
   }
-  
+
   .social-icons li:hover {
   color: #888;
   cursor: pointer;
@@ -41,14 +41,14 @@
 html { font-size: 62.5%; }
 
 body {
-  background-color:white;
+  background-color: white;
   margin: 0;
   font-size: 1.8rem;
   font-family: 'PT Sans', sans-serif;
 }
 
 .main-header {
-  
+
   left: 0;
   top: 0;
   width: 100%;
@@ -84,159 +84,36 @@ body {
   font-size: 1.4rem;
 }
 
-.main-header nav ul { 
-  margin: 0; 
-  padding: 0; 
+.main-header nav ul {
+  margin: 0;
+  padding: 0;
 }
-.main-header a{
-color:white;
-text-decoration:none;
-}
-.main-header a:hover {
-  color: #888;
-  cursor: pointer;
-  transition: all 1s;
-  }
+
 .main-header nav li {
   display: inline-block;
   padding: 0 2rem;
   border-left: .1rem solid black;
 }
-
-main { 
+.main-header ul li a{
+    text-decoration: none;
+    color: black;
+}
+main {
   padding: 10rem 6rem;
-  background: #cbdde1; 
+  background: #cbdde1;
   width:100%;
 }
-/*Image slider*/
-@import url(https://fonts.googleapis.com/css?family=Varela+Round);
-
-html, body { background: white url("https://codepen.io/images/classy_fabric.png"); }
-
-.slides {
-    padding-right: 1500px;
-    width: 420px;
-    height: 320px;
-    display: block;
-    margin: 0 auto;
-    position: relative;
+main img{
+  padding:0;
+  width:40%;
+  box-sizing: border-box;
 }
-
-.slides * {
-    user-select: none;
-    -ms-user-select: none;
-    -moz-user-select: none;
-    -khtml-user-select: none;
-    -webkit-user-select: none;
-    -webkit-touch-callout: none;
-}
-
-.slides input { display: none; }
-
-.slide-container { display: block; }
-
-.slide {
-    top: 0;
-    opacity: 0;
-    width: 420px;
-    height: 320px;
-    display: block;
-    position: absolute;
-
-    transform: scale(0);
-
-    transition: all .7s ease-in-out;
-}
-
-.slide img {
-    width: 100%;
-    height: 100%;
-}
-
-.nav label {
-    width: 100px;
-    height: 100%;
-    display: none;
-    position: absolute;
-
-    opacity: 0;
-    z-index: 9;
-    cursor: pointer;
-
-    transition: opacity .2s;
-
-    color: #FFF;
-    font-size: 156pt;
-    text-align: center;
-    line-height: 300px;
-    font-family: "Varela Round", sans-serif;
-    background-color: rgba(255, 255, 255, .3);
-    text-shadow: 0px 0px 15px rgb(119, 119, 119);
-}
-
-.slide:hover + .nav label { opacity: 0.5; }
-
-.nav label:hover { opacity: 1; }
-
-.nav .next { right: 1080px; }
-
-input:checked + .slide-container  .slide {
-    opacity: 1;
-
-    transform: scale(1);
-
-    transition: opacity 1s ease-in-out;
-}
-
-input:checked + .slide-container .nav label { display: block; }
-
-.nav-dots {
-  width: 50%;
-  right:940px;
- top:350px;
- 
-  height: 11px;
-  display: block;
-  position: absolute;
-  text-align: center;
-}
-
-.nav-dots .nav-dot {
-  top: -5px;
-  width: 11px;
-  height: 11px;
-  margin: 0 4px;
-  position: relative;
-  border-radius: 100%;
-  display: inline-block;
-  background-color: rgba(0, 0, 0, 0.6);
-}
-
-.nav-dots .nav-dot:hover {
-  cursor: pointer;
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-input#img-1:checked ~ .nav-dots label#img-dot-1,
-input#img-2:checked ~ .nav-dots label#img-dot-2,
-input#img-3:checked ~ .nav-dots label#img-dot-3,
-input#img-4:checked ~ .nav-dots label#img-dot-4,
-input#img-5:checked ~ .nav-dots label#img-dot-5,
-input#img-6:checked ~ .nav-dots label#img-dot-6 {
-  background: rgba(0, 0, 0, 0.8);
-}
-
-
 .paragraph{
 float:right;
 width:50%;
 padding-top:80px;
 font-size:18px;
 color:white;
-}
-.paragraph p{
-  padding-top:10px;
-  font-size:20px;
 }
 .paragraph h2{
   color:white;
@@ -247,41 +124,42 @@ color:white;
 .paragraph h3{
   color: #305f66;
   font-size: 20px;
-  padding: 24px;
-  border-width: 450px;
-  border-height: 30px;
+  padding-top: 20px;
+  padding-left:  20px;
+  padding-right:  20px;
+  padding-bottom:  35px;
   border: solid 1px #aecad0;
   font-family: Georgia;
 }
-
+#raquo {
+    display: run-in;
+  }
 .paragraph h3 a:link {
     text-decoration: none;
     padding: 62px;
     font-size: 50px;
     color: #26575e;
-    float:right;
-    position:relative;
 }
 
 .middle-section{
-  
+
   display:inline;
   box-sizing: border-box;
 }
 .middle1{
+  
   float:right;
   color:gray;
   width:25%;
   box-sizing:border-box;
   padding:50px;
-  
+
 }
 .middle1 h3{
-  
   padding-left:50px;
   padding-top:5px;
-  border-bottom: solid 1px;
-  border-color: #305f66
+  border-bottom: solid 1px #96b7be;
+  border-color: #96b7be;
 }
 .middle1 p{
   padding-left:50px;
@@ -289,33 +167,51 @@ color:white;
 }
 .middle1 img{
   margin-left:50px;
-  border: solid 1px;
-  border-color: #305f66
+  border: solid 1px #96b7be;
+  border-color: #96b7be;
 }
 
-
-/*
-.middle{
-  float:right;
-  color:gray;
-  width:25%;
-  box-sizing:border-box;
-  padding:50px;
-}
-.middle h3{
-  border-bottom: solid 2px;
-  border-color:#96b7be;
-  color:black
-  
-}
 .image-container img{
   margin-left: 52px;
   display:inline-block;
-  width:20.5%;
+  width: 20%;
   border:solid 2px;
   border-color: #96b7be;
 }
-*/
+#gg {
+	padding-left: 20px;
+}
+#lower-title h2{
+  float:left;
+  border-bottom:solid 1px;
+  width:50%;
+
+}
+
+.content img {
+    padding: 0.25em;
+    border: solid 2px #82afb5;
+}
+.lower-title p{
+  float:left;
+  padding:none;
+  width:197px;
+
+}
+.lower-title a{
+
+  color:#669999;
+}
+
+#sidebar h2{
+  border-bottom:solid 1px #96b7be;
+  padding-bottom: 20px;
+}
+/*Kodi per sidebar*/
+#main h2 {
+  border-bottom: solid 1px #96b7be;
+  padding-bottom: 20px;
+}
 #main{
   float:left;
   width:50%;
@@ -328,14 +224,29 @@ color:white;
   padding:10px;
   box-sizing: border-box;
 }
+/*Kodi per sidebar*/
 
-#main-footer{
-  background:#333;
-  color:black;
-  padding:1px;
-  margin-top:100px;
+
+
+/*Kodi per footer
+.bg-footer {
+    width: 100%;
+    background-color: #cfe1e1;
 }
-
+.footer {
+    display: inline;
+}
+.footer h3{
+  text-decoration-color: #666666;
+  display: inline;
+  border-bottom: solid 2px;
+  border-color:#666666;
+  padding: 10px;
+}
+#1 {
+  margin-left: 40px;
+}
+*/
 
 
 
