@@ -64,6 +64,10 @@ body {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
 }
+.main-header img {
+  margin-left: 130px;
+  margin-top: 4px;
+}
 
 .heads-up {
   -webkit-transform: translateY(-6rem);
@@ -147,7 +151,7 @@ color:white;
   box-sizing: border-box;
 }
 .middle1{
-  
+
   float:right;
   color:gray;
   width:25%;
@@ -226,8 +230,13 @@ color:white;
 }
 /*Kodi per sidebar*/
 
-
-
+.content-ff p {
+  display: inline;
+  padding-left: 20px;
+}
+.content-ff img p {
+  padding-bottom: 40px;
+}
 /*Kodi per footer
 .bg-footer {
     width: 100%;
@@ -280,53 +289,3 @@ color:white;
   height: 80px;
 }
 */
-
-.footerf {
-    
-  margin:9px 0px 0px 0px;
-  height: 210px;
-  background: #cfe1e1;
- 
-}
-
-
-
-.fmiddle{
-    margin:0px 0rem 0rem 9px;
-    float:left;
-    color:black;
-    width:32%;
-    height:0px;
-    box-sizing:border-box;
-    padding:10px;
-  
-}
-.fmiddle h3{
-  border-bottom: solid 2px;
-  border-color:#464637;
-  margin: 0px 0px 30px 0px;
-  font-family: Times New Roman;
-  font-size: 25px;
-  color: #464637;
-}
-
-.footerf p{
-    
-    line-height:25px;
-    color: #464637;
-
-}
-a:link{
-    color:#b30000;
-    text-decoration: none;
-	
-}
-
-.forma{
-    color: #464637;
-
-}
-#kada{
-    color: #464637;
-
-}
