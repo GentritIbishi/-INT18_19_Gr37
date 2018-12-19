@@ -261,7 +261,6 @@ color:white;
 */
 
 .footerf {
-  display: inline;
   margin:0px 0px 0px 0px;
   height: 210px;
   background: #cfe1e1;
@@ -271,32 +270,48 @@ color:white;
 
 
 .fmiddle{
-    margin:73px 0rem 0rem 0rem;
+    margin:0px 0rem 0rem 9px;
     float:left;
-    color:black;
-    width:33%;
-    height:0px;
+    width:32%;
     box-sizing:border-box;
-    padding:9px;
+    padding:13px;
 
 }
 .fmiddle h3{
   border-bottom: solid 2px;
   border-color:#464637;
-  margin: 0px 0px 0px 0px;
+  margin: 0px 0px 28px 0px;
   font-family: Times New Roman;
-  font-size: 25px;
+  font-size: 30px;
   color: #464637;
 }
 
 .footerf p{
 
-    line-height:34px;
+    line-height:24px;
     color: #464637;
+    
 
+}
+.footerf a{
+        line-height:34px;
+
+    
+}
+.footerf form{
+            line-height:34px;
+
+            
+
+    
 }
 a:link{
     color:#b30000;
+    text-decoration: none;
+}
+a:visited{
+        color:#b30000;
+
 }
 
 .forma{
@@ -307,7 +322,6 @@ a:link{
     color: #464637;
 
 }
-
 
 /*Test
 .image-container{
