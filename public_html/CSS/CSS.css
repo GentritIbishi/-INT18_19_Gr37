@@ -1,31 +1,31 @@
 .social-bar {
-  
+
   background-color: #cbdde1;
   height: 35px;
   width: 100%;
   z-index: 99;
-  
+
   }
-  
+
   .social-icons {
   margin-top:-3px;
   color: white;
   float: right;
   }
-  
+
   .social-icons li {
   display: inline-block;
   margin-right: 15px;
   margin-top: 10px;
-  
+
   font-size: 18px;
   transition: all 1s;
   }
-  
+
   .social-icons li:last-child {
   margin-right: 100px;
   }
-  
+
   .social-icons li:hover {
   color: #888;
   cursor: pointer;
@@ -48,7 +48,7 @@ body {
 }
 
 .main-header {
-  
+
   left: 0;
   top: 0;
   width: 100%;
@@ -84,9 +84,9 @@ body {
   font-size: 1.4rem;
 }
 
-.main-header nav ul { 
-  margin: 0; 
-  padding: 0; 
+.main-header nav ul {
+  margin: 0;
+  padding: 0;
 }
 .main-header a{
 color:white;
@@ -164,7 +164,7 @@ color:white;
   padding-left:50px;
   padding-top: 5px;
   border-color: #96b7be;
-  width:90%;	
+  width:90%;
 
 }
 #hr {
@@ -235,42 +235,20 @@ color:white;
   box-sizing: border-box;
 }
 /*Kodi per sidebar*/
-
 .content-ff p {
   display: inline;
   padding-left: 20px;
 }
+
 .content-ff img p {
   padding-bottom: 40px;
 }
-/*Kodi per footer
-.bg-footer {
-    width: 100%;
-    background-color: #cfe1e1;
-}
-.footer {
-    display: inline;
-}
-.footer h3{
-  text-decoration-color: #666666;
-  display: inline;
-  border-bottom: solid 2px;
-  border-color:#666666;
-  padding: 10px;
-}
-#1 {
-  margin-left: 40px;
-}
-*/
 
 .footerf {
   margin:0px 0px 0px 0px;
   height: 210px;
   background: #cfe1e1;
-
 }
-
-
 
 .fmiddle{
     margin:0px 0rem 0rem 9px;
@@ -293,20 +271,16 @@ color:white;
 
     line-height:24px;
     color: #464637;
-    
+
 
 }
 .footerf a{
         line-height:34px;
 
-    
+
 }
 .footerf form{
             line-height:34px;
-
-            
-
-    
 }
 a:link{
     color:#b30000;
@@ -325,33 +299,17 @@ a:visited{
     color: #464637;
 
 }
-
-/*Test
-.image-container{
-  position:absolute;
-  left: 50%;
-  right:0px;
-  width: 500px;
-  margin-left: -250px;
+.Copyright {
+  height: 40px;
+  background-color: #054451;
 }
-
-.scroll-horizontal{
-  overflow-x: scroll;
-  overflow-y: hidden;
-  display:block;
-  width:100%;
+.Copyright p {
+  padding-left: 20px;
+  padding-top: 10px;
+  color: white;
 }
-
-.image-group {
-  white-space:nowrap;
-  width:auto;
+#cr {
+  text-align: right;
+  margin-top: -25px;
+  margin-right: 20px;
 }
-
-
-.image-placeholer{
-  display: inline-block;
-  background: lightgreen;
-  width: 80px;
-  height: 80px;
-}
-*/
