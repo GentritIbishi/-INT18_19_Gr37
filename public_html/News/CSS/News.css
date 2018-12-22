@@ -1,3 +1,271 @@
-body{
+.social-bar {
+
+    background-color: #cbdde1;
+    height: 35px;
+    width: 100%;
+    z-index: 99;
+  
+    }
+  
+    .social-icons {
+    margin-top:-3px;
+    color: white;
+    float: right;
+    }
+  
+    .social-icons li {
+    display: inline-block;
+    margin-right: 15px;
+    margin-top: 10px;
+  
+    font-size: 18px;
+    transition: all 1s;
+    }
+  
+    .social-icons li:last-child {
+    margin-right: 100px;
+    }
+  
+    .social-icons li:hover {
+    color: #888;
+    cursor: pointer;
+    }
+    * {
+    margin: 0;
+    padding: 0px;
+    }
+  @import url('https://fonts.googleapis.com/css?family=PT+Sans');
+  
+  * { box-sizing: border-box; }
+  
+  html { font-size: 62.5%; }
+  
+  body {
+    background-color:white;
+    margin: 0;
+    font-size: 14px;
+    font-family: 'PT Sans', sans-serif;
+  }
+  
+  .main-header {
+  
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 6rem;
+    color: white;
+    background: #96b7be;
+    line-height: 6rem;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+    transition: .25s transform;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+  }
+  
+  .heads-up {
+    -webkit-transform: translateY(-6rem);
+            transform: translateY(-6rem);
+    -webkit-transform: translate3d(0,-6rem,0);
+            transform: translate3d(0,-6rem,0);
+  }
+  
+  .main-header h1 {
+    float: left;
+    font-size: 2.5rem;
+    margin: 0 0 0 2rem;
+    text-transform: uppercase;
+  }
+  
+  .main-header nav {
+    float: right;
+    font-size: 1.4rem;
+  }
+  
+  .main-header nav ul {
+    margin: 0;
+    padding: 0;
+  }
+  .main-header a{
+  color:white;
+  text-decoration:none;
+  }
+  .main-header a:hover {
+    color: #888;
+    cursor: pointer;
+    transition: all 1s;
+    }
+  .main-header nav li {
+    display: inline-block;
+    padding: 0 2rem;
+    border-left: .1rem solid black;
+  }
+  main {
+    padding-top:10rem;
+    background: #cbdde1;
+    width:100%;
+  }
+/*Vertical Social Bar*/
+
+body {
+  background-color: #f2f2f2;
+}
+
+.vertical-social-bar {
+  position: fixed;
+  left: -15px;
+  top: 100px;
+  background-color: white;
+}
+.social-bar__item {
+  padding: 10px 10px 10px 25px;
+  color: white;
+  font-size: 30px;
+  text-align: center;
+  transition-property: transform, opacity;
+  transition-duration: 100ms;
+  transition-timing-function: ease-in-out;
+}
+.social-bar__item:hover {
+  transform: translate(15px);
+  opacity: 0.9;
+}
+.social-bar__fb {
+  background-color: #3b5999;
+}
+.social-bar__twitter {
+  background-color: #55acee;
+}
+.social-bar__linkedin {
+  background-color: #0077B5;
+}
+.social-bar__instagram {
+  background-color: #e4405f;
+}
+
+/*Vertical Social Bar*/
+
+.News-section1{
+    width:100%;
+    display:inline-block;
+    box-sizing: border-box
+}
+.News-section1 h3{
+  padding-top:15px;  
+  width:35%;
+    border-top:solid 1px;
+    float:left;
+    margin-left:140px;
+    margin-right:50px;
+    border-bottom:solid 1px;
+    border-color:#305f66;
     
+}
+.News-section1 img{
+border:solid 1px;
+border-color: #305f66;
+width:35%;
+box-sizing: border-box;
+float:left;
+margin-left:140px;
+margin-right: 50px;
+}
+.News-section1 a{
+  text-decoration: none;
+  color:white;
+}
+.News-section1 a:hover{
+  color:gray;
+  cursor: pointer;
+  transition: 0ms;
+}
+
+
+
+
+
+/*Kodi Per Pjesen e poshtme*/
+
+.content-ff p {
+  display: inline;
+  padding-left: 20px;
+}
+
+.content-ff img p {
+  padding-bottom: 40px;
+}
+
+.footerf {
+  margin:0px 0px 0px 0px;
+  height: 210px;
+  background: #cfe1e1;
+}
+
+.fmiddle{
+    margin:0px 0rem 0rem 9px;
+    float:left;
+    width:32%;
+    box-sizing:border-box;
+    padding:13px;
+
+}
+.fmiddle h3{
+  border-bottom: solid 2px;
+  border-color:#464637;
+  margin: 0px 0px 28px 0px;
+  font-family: Times New Roman;
+  font-size: 30px;
+  color: #464637;
+}
+
+.footerf p{
+
+  line-height:24px;
+  color: #464637;
+
+
+}
+.footerf a{
+      line-height:34px;
+
+
+}
+.footerf form{
+          line-height:34px;
+}
+a:link{
+  color:#b30000;
+  text-decoration: none;
+}
+a:visited{
+      color:#b30000;
+
+}
+
+.forma{
+  color: #464637;
+
+}
+#kada{
+  color: #464637;
+
+}
+
+
+/*Kodi per Copyright*/
+.Copyright {
+  height: 40px;
+  background-color: #054451;
+}
+.Copyright p {
+  padding-left: 20px;
+  padding-top: 10px;
+  color: white;
+}
+#cr {
+  text-align: right;
+  margin-top: -25px;
+  margin-right: 20px;
 }
