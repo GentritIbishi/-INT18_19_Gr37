@@ -13,7 +13,7 @@
             var message=document.getElementById('msg').value;
 
            if(emdhemb.length === 0 && email.length !== 0 && message.length !== 0){
-               alert('Enter the first name and last name ');
+               alert('Enter the first name and last name.');
                return;
            }
            else if(emdhemb.length !== 0 && email.length === 0 && message.length !== 0){
@@ -25,20 +25,23 @@
                return;
            }
            else if(emdhemb.length === 0 && email.length === 0 && message.length !== 0){
-              alert('Fill out the required information');
+              alert('Fill out the required information ');
                return;
            }
            else if(emdhemb.length === 0 && email.length !== 0 && message.length === 0){
-              alert('Fill out the required information');
+              alert('Fill out the required information ');
                return;
            }
            else if(emdhemb.length !== 0 && email.length === 0 && message.length === 0){
-              alert('Fill out the required information');
+              alert('Fill out the required information ');
+               return;
+           }
+           else if(emdhemb.length === 0 && email.length === 0 && message.length === 0){
+              alert('Please fill out the data in order to send the message ');
                return;
            }
            else {
-              alert('The message was sent !');
-               return;
+               alert('The message was sent successfully !')
            }
        }
         </script>
