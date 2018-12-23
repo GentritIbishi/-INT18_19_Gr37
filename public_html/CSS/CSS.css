@@ -1,4 +1,4 @@
-//Kodi per Social Bar
+/*Kodi per Social Bar*/
 .social-bar {
 
   background-color: #cbdde1;
@@ -35,7 +35,7 @@
   margin: 0;
   padding: 0px;
   }
-//Kodi per hederin
+/*Kodi per hederin*/
 @import url('https://fonts.googleapis.com/css?family=PT+Sans');
 
 * { box-sizing: border-box; }
@@ -104,7 +104,7 @@ text-decoration:none;
   padding: 0 2rem;
   border-left: .1rem solid black;
 }
-//Kodi per sekcionin main
+/*Kodi per sekcionin main*/
 main {
   padding: 10rem 6rem;
   background: #cbdde1;
@@ -147,7 +147,7 @@ color:white;
     font-size: 50px;
     color: #26575e;
 }
-//Kodi per sekcionin e mesem
+/*Kodi per sekcionin e mesem*/
 .middle-section{
 
   display:inline;
