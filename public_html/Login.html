@@ -57,18 +57,18 @@
        </style>
        <script type="text/javascript">
     function fillingthespaces(){
-            var nandl=document.getElementById('nameandlastname').value;
+            var user=document.getElementById('username').value;
             var pw=document.getElementById('password').value;
 
-           if(nandl.length === 0 && pw.length !== 0){
-               alert('Enter the first name and last name');
+           if(user.length === 0 && pw.length !== 0){
+               alert('Enter any Username');
                return;
            }
-           else if(pw.length === 0 && nandl.length !==0 ){
-               alert('Enter a disparate password');
+           else if(pw.length === 0 && user.length !==0 ){
+               alert('Enter any password');
                return;
            }
-           else if(pw.length === 0 && nandl.length ===0){
+           else if(pw.length === 0 && user.length ===0){
               alert('Fill out the required information');
                return;
            }
@@ -82,7 +82,7 @@
             <form method="post"  action="Simplicity.html" style="text-align: center; display: inline;color:#000000;">
                 <pre>
 Username:                  Password:
-<input type="text" required="" id="nameandlastname" name="nameandlastname" style="padding:7px;border-radius: 10px 10px;">  <input type="password" required="" id="password" name="psw" style="padding:7px;border-radius: 10px 10px;"><br><br><input type="submit" value="SUBMIT" onclick="fillingthespaces()"> <input type="reset" value="RESET">
+<input type="text" required="" id="username" name="username" style="padding:7px;border-radius: 10px 10px;">  <input type="password" required="" id="password" name="psw" style="padding:7px;border-radius: 10px 10px;"><br><br><input type="submit" value="SUBMIT" onclick="fillingthespaces()"> <input type="reset" value="RESET">
 </pre>
             </form>
          </div>
