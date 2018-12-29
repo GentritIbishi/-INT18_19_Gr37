@@ -66,7 +66,19 @@ body {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
 }
+/*logo e faqes */
 
+#logo {
+  margin-top: -50px;
+  margin-left: 80px;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease;
+}
+#logo:hover{
+    transform: rotate(360deg);
+}
+
+/*logo e faqes */
 .heads-up {
   -webkit-transform: translateY(-6rem);
           transform: translateY(-6rem);
