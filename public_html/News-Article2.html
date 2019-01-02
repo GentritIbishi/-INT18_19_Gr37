@@ -33,17 +33,17 @@
     </header>
     <div class="sidebar">
         <h3>Read More</h3>
-        <p>Content</p>
-        <p><a href="https://caniuse.com/#search=sticky">caniuse stats</a>
+        <a href="News-Article3.html"><img src="News/Images/moscow-iStock-505694212.jpeg"width="200px"height="150px"> </a>
+        <p><a href="News-article3.html">The most in-demand destinations of 2018, according to Google</a>
 
     </p>
 </div>
   
-    <h2>Avalanche reports: what is the risk in the French Alps this week?</h2>
+    <h2 id="main-header">Avalanche reports: what is the risk in the French Alps this week?</h2>
 
 <img src="News/Images/avalanche-sign-large.jpg"width="700px"height="500px">
 
-<p>Staying safe when skiing or snowboarding in the mountains is crucial – an important part of that is being aware of the risk of avalanche where you are, being prepared when heading off piste, and knowing what to do should an avalanche happen.
+<p id="paragraph">Staying safe when skiing or snowboarding in the mountains is crucial – an important part of that is being aware of the risk of avalanche where you are, being prepared when heading off piste, and knowing what to do should an avalanche happen.
 
         The Telegraph Ski & Snowboard has teamed up with Henry Schneiwind from Henry’s Avalanche Talk, to provide up-to-date avalanche safety reports from the Savoie region of the French Alps, which includes popular resorts such as Courchevel, Méribel, Val Thorens and Les Menuires in the Trois Vallées as well as Val d'Isère, Tignes, La Plagne, Les Arcs, La Rosière and La Tania.
         
@@ -51,25 +51,73 @@
 
 
 
-    <h2>What is the current avalanche risk in the Northern French Alps/Savoie</h2>
+    <h2 id="header">What is the current avalanche risk in the Northern French Alps/Savoie</h2>
 
-    <p>HS: There’s a risk of natural wet snow avalanches, especially below 2,300m. This weekend, freezing levels are forecast to rise above 2,500m at times in most of the northern French Alps. We will see a rapid rise in temperature, along with rain, snow and sun, this will create a risk of spontaneous, natural avalanches – especially just after a snowstorm. These will not be triggered by skiers but happen spontaneously, especially below 2,300m.</p>
-
-
-    <h2>What does this mean for off-piste skiers and snowboarders?</h2>
-<p>With all the new precipitation, this kind of instability is going to be a real concern for off-piste skiers and snowboarders who are out in avalanche terrain this coming week.</p>
-
-<p>Avalanche safety | Risk scale
-        Rating	Risk level	Snow stability
-        1	Low	Very few unstable slabs. The snow pack is well bonded and stable in most places.
-        2	Moderate	Unstable slabs possible on some steep slopes.
-        3	Considerable	Unstable slabs probable on some steep slopes.
-        4	High	Unstable slabs likely on many steep slopes.
-        5	Very high	The snowpack is weakly bonded and very unstable.
-        </p>
+    <p id="paragraph">HS: There’s a risk of natural wet snow avalanches, especially below 2,300m. This weekend, freezing levels are forecast to rise above 2,500m at times in most of the northern French Alps. We will see a rapid rise in temperature, along with rain, snow and sun, this will create a risk of spontaneous, natural avalanches – especially just after a snowstorm. These will not be triggered by skiers but happen spontaneously, especially below 2,300m.</p>
 
 
-
+    <h2 id="header">What does this mean for off-piste skiers and snowboarders?</h2>
+<p id="paragraph">With all the new precipitation, this kind of instability is going to be a real concern for off-piste skiers and snowboarders who are out in avalanche terrain this coming week.</p>
+<body>
+<div class="table">    
+    <table style="width:50%">
+        <tr>
+          <th>Rating</th>
+          <th>Risk Level</th> 
+          <th>Snow Stability</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Low</td> 
+          <td>Very few unstable slabs. The snow pack is well
+              bonded and stable in most places.
+          </td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Moderate</td> 
+          <td>Unstable slabs possible on some steep slopes.</td>
+        </tr>
+          <tr>
+        <td>3</td>
+        <td>Considerable</td> 
+        <td>Unstable slabs probable on some steep slopes.</td>
+        </tr>
+        <tr>
+        <td>4</td>
+         <td>High</td> 
+        <td>Unstable slabs likely on many steep slopes.</td>
+        </tr>
+        <tr>
+        <td>5</td>
+        <td>Very high</td> 
+        <td>The snowpack is weakly bonded and very unstable.</td>
+        </tr>
+      </table>
+      </div>
+<style>
+table, th, td {
+  border: 1px solid black;
+  padding:10px;
+  border-collapse: collapse;
+  border-color:#91b4ba;
+  color:#737373;
+}
+.table table{
+  margin-left:380px;
+}
+</style>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<!--Copyright Kodi-->
+<div class="Copyright">
+    <p>Copyright &copy; 2018 PRISHTINA24 - All Rights Reserved.</p>
+    <p id="cr">Template by OS Templates</p>
+    </div>
 
 
 
@@ -193,6 +241,30 @@ body{
     text-align:center;
     background-color:#cbdde1;
 }
+
+#main-header{
+  font-size:30px;
+  padding:20px;
+  width:50%;
+  margin-left:380px;
+}
+#header{
+  font-size:30px;
+padding:20px;
+width:50%;
+margin-left:380px;
+}
+#paragraph{
+font-size:18px;  
+padding:20px;
+width:50%;
+margin-left:380px;
+color:#737373;
+}
+
+
+
+
 .sidebar {
   width: 25%;
   height: 25vh;
@@ -203,14 +275,34 @@ body{
   top: 5%;
   left: 1200px;
 }
-
-
+.sidebar a{
+text-decoration: none;
+color:#737373;
+}
+.sidebar img{
+    padding:10px;
+}
 .sidebar {
   border: 5px solid #222;
-  background-color: white;
+  background-color:#cbdde1;
   border-radius: 10px;
-  color: #222;
+  color: "#737373";
   padding: 15px;
+}
+/*Kodi per Copyright*/
+.Copyright {
+  height: 40px;
+  background-color: #054451;
+}
+.Copyright p {
+  padding-left: 20px;
+  padding-top: 10px;
+  color: white;
+}
+#cr {
+  text-align: right;
+  margin-top: -25px;
+  margin-right: 20px;
 }
 </style>
 
