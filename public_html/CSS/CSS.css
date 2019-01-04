@@ -1,4 +1,4 @@
-/*Kodi per Social Bar*/
+/******************Kodi per Social Bar********************/
 .social-bar {
 
   background-color: #cbdde1;
@@ -35,7 +35,7 @@
   margin: 0;
   padding: 0px;
   }
-/*Kodi per hederin*/
+/*******************Kodi per hederin*******************/
 @import url('https://fonts.googleapis.com/css?family=PT+Sans');
 
 * { box-sizing: border-box; }
@@ -66,7 +66,7 @@ body {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
 }
-/*logo e faqes */
+/****************logo e faqes ************/
 
 #logo {
   margin-top: -50px;
@@ -78,7 +78,7 @@ body {
     transform: rotate(360deg);
 }
 
-/*logo e faqes */
+/*****************logo e faqes ****************/
 .heads-up {
   -webkit-transform: translateY(-6rem);
           transform: translateY(-6rem);
@@ -116,7 +116,7 @@ text-decoration:none;
   padding: 0 2rem;
   border-left: .1rem solid black;
 }
-/*Kodi per sekcionin main*/
+/*********************Kodi per sekcionin main**************/
 main {
   padding: 10rem 6rem;
   background: #cbdde1;
@@ -159,7 +159,7 @@ color:white;
     font-size: 50px;
     color: #26575e;
 }
-/*Kodi per sekcionin e mesem*/
+/**************Kodi per sekcionin e mesem**************/
 .middle-section{
 
   display:inline;
@@ -231,7 +231,7 @@ color:white;
   border-bottom:solid 1px #96b7be;
   padding-bottom: 20px;
 }
-/*Kodi per sidebar*/
+/***************Kodi per sidebar*********************/
 #main h2 {
   border-bottom: solid 1px #96b7be;
   padding-bottom: 20px;
@@ -248,7 +248,13 @@ color:white;
   padding:10px;
   box-sizing: border-box;
 }
-/*Kodi per sidebar*/
+
+#link  a{
+  text-decoration: none;
+  color:#96b7be
+}
+
+/*************************Kodi per sidebar******************/
 .content-ff p {
   display: inline;
   padding-left: 20px;
@@ -297,11 +303,11 @@ color:white;
             line-height:34px;
 }
 a:link{
-    color:white;
+    color:darkred;
     text-decoration: none;
 }
 a:visited{
-        color:white;
+        color:darkred;
 
 }
 
