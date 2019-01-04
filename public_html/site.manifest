@@ -1,0 +1,31 @@
+CACHE MANIFEST
+#2019-04-01
+
+CACHE:
+index.html
+CSS/CSS.css
+J QUERY/code.js
+IMG/Login.png
+IMG/image.jpeg
+IMG/image1.jpeg
+IMG/image2.jpeg
+IMG/image3.jpeg
+IMG/sign.png
+IMG/main-image.jpg
+IMG/ticket.png
+News/News.html
+News/CSS/News.css
+News/JS/News.js
+News/Images/avalanche-sign-large.jpg
+News/Images/99564169__Abu Dhabi airport (1).jpeg
+News/Images/strasbourg-market-medium.jpg
+News/Images/verbier-skiers.jpeg
+News/Images/taj-mahal-crowd.jpeg
+News/Images/moscow-iStock-505694212.jpeg
+
+#Require the user to be online
+NETWORK:
+Login.html
+
+FALLBACK
+*.html index.html
