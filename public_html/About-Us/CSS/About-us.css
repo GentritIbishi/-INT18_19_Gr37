@@ -102,7 +102,48 @@
     padding: 0 2rem;
     border-left: .1rem solid black;
   }
+  /*********************************Kodi per vertical social bar************************/
+  body {
+    background-color: #f2f2f2;
+  }
   
+  .vertical-social-bar {
+    position: fixed;
+    left: -15px;
+    top: 100px;
+    background-color: white;
+  }
+  .social-bar__item {
+    padding: 10px 10px 10px 25px;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    transition-property: transform, opacity;
+    transition-duration: 100ms;
+    transition-timing-function: ease-in-out;
+  }
+  .social-bar__item:hover {
+    transform: translate(15px);
+    opacity: 0.9;
+  }
+  .social-bar__fb {
+    background-color: #3b5999;
+  }
+  .social-bar__twitter {
+    background-color: #55acee;
+  }
+  .social-bar__linkedin {
+    background-color: #0077B5;
+  }
+  .social-bar__instagram {
+    background-color: #e4405f;
+  }
+  /*****************************Kodi per vertical social bar**********************/  
+
+
+
+
+
   main { 
     padding: 10rem 6rem;
     background: #cbdde1; 
@@ -212,49 +253,71 @@
   body {
     background-color: #cbdde1;
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  .footer {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    padding: 1rem;
-    background-color: #0c5e2e;
-    text-align: center;
-    color:white;
-  } 
+  .introduction h1
+  {
+    width:50%;
+    font-size:40px;
+    margin-left:525px;
+    color:#737373;
+    padding:20px;
+  }
+  .introduction img{
+    margin-left:380px;
+    width:50%;
+  }
+.introduction p{
+font-size: 25px;
+width:50%;
+margin-left:380px;
+color:#737373;
+padding:20px;
+}
+#introduction-heading{
+  font-size:40px;
+  margin-left:525px;
+  width:50%;
+  color:#737373;
+  padding-top:20px;
+}
+.video{
+  font-size:25px;
+  width:50%;
+  margin-left:380px;
+}
+.video h1{
+  color:#737373;
+  border-bottom:solid 1px;
+  border-color:#737373;
+}
+.location iframe{
+margin-left:380px;
+padding:25px;
+width:50%;
+}
+.location h1{
+  font-size:45px;
+  padding-top:15px;
+  width:50%;
+  margin-left:380px;
+  color:#737373;
+  border-bottom:solid 1px;
+  border-color:#737373;
+}
+/*Kodi per Copyright*/
+.Copyright {
+  height: 40px;
+  background-color: #054451;
+}
+.Copyright p {
+  padding-left: 20px;
+  padding-top: 10px;
+  color: white;
+}
+#cr {
+  text-align: right;
+  margin-top: -25px;
+  margin-right: 20px;
+}
+.input-cl{
+     padding: 3px 6px;
+}
