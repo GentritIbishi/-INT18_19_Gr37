@@ -1,136 +1,295 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<style>
-canvas {
-    border:1px solid #d3d3d3;
-    background-color: #f1f1f1;
-    
-}
-</style>
-</head>
-<body onload="startGame()">
-<script>
+<header>
+    <title>Snake game</title>
+</header>
 
-var myGamePiece;
-var myObstacles = [];
-var myScore;
+<body>
+        <div class="container">  <div class="instructions"> Use your keyboard arrows to move , start by clicking any arrow button.
+            </div>
+            <div class="game">
+            </div>
+            <div class="game_controls">
+              <div class="score_container">
+                Score:<span class="score">0</span>
+              </div>
+              <button id="restart_game" type="button">RESTART</button>
+            </div>
+          </div>
+
+          <style>
+          
+          html,
+body {
+  margin: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+}
+
+.container {
+  position: relative;
+  padding: 20px;
+}
+
+.score_container {
+  font-size: 16px;
+  text-align: center;
+  margin: 10px 0;
+}
+
+#restart_game {
+  margin: 0 auto;
+  display: block;
+  padding: 9px 5px;
+  background: #212121;
+  color: #00ff80;
+  font-weight: bold;
+  border: none;
+}
+
+.title {
+  font-size: 16px;
+}
+
+.game {
+  height: 225px;
+  width: 225px;
+  background: #E0E0E0;
+  margin: 0 auto;
+}
+
+.tile {
+  float: left;
+  margin: 0;
+  content: '';
+  background: #E0E0E0;
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+      box-shadow: inset 0px 0px 0px 1px rgba(0, 134, 255, 0.05);
+}
+
+.body {
+  background: #BDBDBD;
+  border: 1px solid #E0E0E0;
+  border-radius: 3px;
+}
+
+.head {
+  background: black;
+}
+
+.fruit {
+  background: #00b35a;
+  border-radius: 5px;
+}
+
+.instructions {
+  font-size: 13px;
+  color: #757575;
+  padding-bottom: 20px;
+}
+          </style>
+          <script>
+          var direction;
+var tilesNum = 225;
+var tilesPerRow = Math.sqrt(tilesNum);
+var rowStartLeft = new Array();
+var rowStartTop = new Array();
+var rowEndBottom = new Array();
+var rowEndRight = new Array();
+var emptyTiles = new Array();
+var body = [3, 2, 1];
+var moving;
+var fruitGenerator;
+var powerGenerator;
+var gameDiv = document.getElementsByClassName('game')[0];
+var boxDimensions = (100 / tilesPerRow).toFixed(3);
+var restartButton = document.getElementById('restart_game');
+var scoreSpan = document.getElementsByClassName('score')[0];
+var score = 0;
+var speed = 0.1;
+
+restartButton.addEventListener("click", function() {
+  restartGame();
+}, false);
+
+function createGrid() {
+  for (var i = 1; i <= tilesNum; i++) {
+    gameDiv.innerHTML = gameDiv.innerHTML + '<div class="tile" data-tile="' + i + '" style="width:' + boxDimensions + '%; height:' + boxDimensions + '%"></div>';
+  }
+}
+
+function createBody() {
+  for (var i = 1; i <= body.length; i++) {
+    if (i == 3) {
+      document.querySelector('[data-tile="' + i + '"]').classList.add("head", "body");
+    } else if (i == 1 || i == 2) {
+      document.querySelector('[data-tile="' + i + '"]').classList.add("body");
+    }
+  }
+}
+
+// Array consisting of upmost left boxes
+for (var i = 1; i <= tilesNum; i += tilesPerRow) {
+  rowStartLeft.push(i);
+}
+
+// Array consisting of upmost right boxes
+for (var i = tilesPerRow; i <= tilesNum; i += tilesPerRow) {
+  rowEndRight.push(i);
+}
+
+// Array consisting of upmost top boxes
+for (var i = 1; i <= tilesPerRow; i += 1) {
+  rowStartTop.push(i);
+}
+
+// Array consisting of upmost bottom boxes
+for (var i = (tilesNum - tilesPerRow) + 1; i <= tilesNum; i += 1) {
+  rowEndBottom.push(i);
+}
+
+window.addEventListener("keydown", control, false);
+
+function control(e) {
+  // RIGHT ARROW
+  if (e.keyCode == "39") {
+    if (direction != 'r' && direction != 'l') {
+      changeDirection('r');
+    }
+  }
+
+  // LEFT ARROW
+  if (e.keyCode == "37") {
+    if (direction != 'l' && direction != 'r') {
+      changeDirection('l');
+    }
+  }
+
+  // DOWN ARROW
+  if (e.keyCode == "40") {
+    if (direction != 'd' && direction != 'u') {
+      changeDirection('d');
+    }
+  }
+
+  // UP ARROW
+  if (e.keyCode == "38") {
+    if (direction != 'u' && direction != 'd') {
+      changeDirection('u');
+    }
+  }
+}
+
+function changeDirection(d) {
+  var directionDeciderNum,
+    directionArrayInit,
+    directionArrayOf;
+  switch (d) {
+    case "r":
+      directionDeciderNum = 1;
+      directionArrayInit = rowEndRight;
+      directionArrayOf = rowStartLeft;
+      break;
+    case "l":
+      directionDeciderNum = -1;
+      directionArrayInit = rowStartLeft;
+      directionArrayOf = rowEndRight;
+      break;
+    case "d":
+      directionDeciderNum = tilesPerRow;
+      directionArrayInit = rowEndBottom;
+      directionArrayOf = rowStartTop;
+      break;
+    case "u":
+      directionDeciderNum = -tilesPerRow;
+      directionArrayInit = rowStartTop;
+      directionArrayOf = rowEndBottom;
+      break;
+  }
+
+  clearInterval(moving);
+
+  moving = setInterval(function() {
+    direction = d;
+    var head = document.getElementsByClassName('head')[0];
+    var nextTileNum = directionArrayInit.indexOf(parseInt(head.dataset.tile, 10)) > -1 ? directionArrayOf[directionArrayInit.indexOf(parseInt(head.dataset.tile, 10))] : parseInt(head.dataset.tile, 10) + directionDeciderNum;
+    if (body.indexOf(nextTileNum) > -1) {
+      scoreSpan.innerHTML = +score + ". GAME OVER";
+      restartGame();
+    } else {
+      var nextTile = document.querySelector('[data-tile ="' + nextTileNum + '"]');
+
+      var lastTile = document.querySelector('[data-tile ="' + body[body.length - 1] + '"]');
+      body.unshift(nextTileNum);
+
+      nextTile.classList.add("head", "body");
+
+      // IF EATEN FRUIT
+      if (nextTile.classList.contains('fruit')) {
+        score += 1;
+        scoreSpan.innerHTML = score;
+        speed = score % 2 == 0 ? speed += 0.01 : speed;
+        nextTile.classList.remove('fruit');
+        clearInterval(fruitGenerator);
+        generateFruit();
+        fruitGen();
+      } 
+
+      // IF JUST MOVING
+      else {
+        lastTile.classList.remove("body");
+        body.pop();
+      };
+      head.classList.remove("head");
+    }
+  }, 10 / speed);
+}
+
+function generateFruit() {
+  var rand;
+  var fruit = document.getElementsByClassName('fruit')[0];
+  if (fruit) {
+    fruit.classList.remove('fruit');
+  }
+  do {
+    rand = Math.floor(Math.random() * tilesNum);
+  } while (body.indexOf(rand) > -1);
+  document.querySelector('[data-tile ="' + rand + '"]').classList.add('fruit');
+}
+
+function fruitGen() {
+  fruitGenerator = setInterval(function() {
+    generateFruit();
+  }, 3000)
+};
 
 function startGame() {
-    myGamePiece = new component(30, 30, "orange", 10, 120);
-    myGamePiece.gravity = 0.05;
-    myScore = new component("30px", "Consolas", "black", 280, 40, "text");
-    myGameArea.start();
+  createGrid();
+  createBody();
+  generateFruit();
 }
 
-var myGameArea = {
-    canvas : document.createElement("canvas"),
-    start : function() {
-        this.canvas.width = 480;
-        this.canvas.height = 270;
-        this.context = this.canvas.getContext("2d");
-        document.body.insertBefore(this.canvas, document.body.childNodes[0]);
-        this.frameNo = 0;
-        this.interval = setInterval(updateGameArea, 20);
-        },
-    clear : function() {
-        this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
-    }
+function restartGame() {
+  scoreSpan.innerHTML = +score + ". GAME OVER";
+  clearInterval(fruitGenerator);
+  clearInterval(moving);
+  body = [3, 2, 1];
+  speed = 0.1;
+  score = 0;
+  document.querySelector('.game').innerHTML = "";
+  direction = '';
+  startGame();
 }
 
-function component(width, height, color, x, y, type) {
-    this.type = type;
-    this.score = 0;
-    this.width = width;
-    this.height = height;
-    this.speedX = 0;
-    this.speedY = 0;    
-    this.x = x;
-    this.y = y;
-    this.gravity = 0;
-    this.gravitySpeed = 0;
-    this.update = function() {
-        ctx = myGameArea.context;
-        if (this.type == "text") {
-            ctx.font = this.width + " " + this.height;
-            ctx.fillStyle = color;
-            ctx.fillText(this.text, this.x, this.y);
-        } else {
-            ctx.fillStyle = color;
-            ctx.fillRect(this.x, this.y, this.width, this.height);
-        }
-    }
-    this.newPos = function() {
-        this.gravitySpeed += this.gravity;
-        this.x += this.speedX;
-        this.y += this.speedY + this.gravitySpeed;
-        this.hitBottom();
-    }
-    this.hitBottom = function() {
-        var rockbottom = myGameArea.canvas.height - this.height;
-        if (this.y > rockbottom) {
-            this.y = rockbottom;
-            this.gravitySpeed = 0;
-        }
-    }
-    this.crashWith = function(otherobj) {
-        var myleft = this.x;
-        var myright = this.x + (this.width);
-        var mytop = this.y;
-        var mybottom = this.y + (this.height);
-        var otherleft = otherobj.x;
-        var otherright = otherobj.x + (otherobj.width);
-        var othertop = otherobj.y;
-        var otherbottom = otherobj.y + (otherobj.height);
-        var crash = true;
-        if ((mybottom < othertop) || (mytop > otherbottom) || (myright < otherleft) || (myleft > otherright)) {
-            crash = false;
-        }
-        return crash;
-    }
-}
-
-function updateGameArea() {
-    var x, height, gap, minHeight, maxHeight, minGap, maxGap;
-    for (i = 0; i < myObstacles.length; i += 1) {
-        if (myGamePiece.crashWith(myObstacles[i])) {
-            return;
-        } 
-    }
-    myGameArea.clear();
-    myGameArea.frameNo += 1;
-    if (myGameArea.frameNo == 1 || everyinterval(150)) {
-        x = myGameArea.canvas.width;
-        minHeight = 20;
-        maxHeight = 200;
-        height = Math.floor(Math.random()*(maxHeight-minHeight+1)+minHeight);
-        minGap = 50;
-        maxGap = 200;
-        gap = Math.floor(Math.random()*(maxGap-minGap+1)+minGap);
-        myObstacles.push(new component(10, height, "white", x, 0));
-        myObstacles.push(new component(10, x - height - gap, "white", x, height + gap));
-    }
-    for (i = 0; i < myObstacles.length; i += 1) {
-        myObstacles[i].x += -1;
-        myObstacles[i].update();
-    }
-    myScore.text="SCORE: " + myGameArea.frameNo;
-    myScore.update();
-    myGamePiece.newPos();
-    myGamePiece.update();
-}
-
-function everyinterval(n) {
-    if ((myGameArea.frameNo / n) % 1 == 0) {return true;}
-    return false;
-}
-
-function accelerate(n) {
-    myGamePiece.gravity = n;
-}
-</script>
-<br>
-<button onmousedown="accelerate(-0.2)" onmouseup="accelerate(0.05)">Accelerate</button>
+startGame();
+          
+          </script>
 </body>
+
+
 </html>
