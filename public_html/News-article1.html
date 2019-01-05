@@ -21,16 +21,17 @@
         </div>
   <!--Kodi per hederin-->
   <header class="main-header">
-    <h1>PRISHTINA24</h1>
     <nav>
       <ul>
-        <li><a href="Index.html">Homepage</a></li>
+        <li><a href="Index.html">Home</a></li>
         <li><a href="About-Us/About-us.html">About Us</a></li>
         <li><a href="Contact-us.html">Contact us</a></li>
         <li><a href="News/News.html">News</a></li>
+        <li><a href="Login.html">Log Out</a></li>
       </ul>
     </nav>
     </header>
+    <a href="Index.html"><img id="logo" width="200" height="200" src="IMG/Login.png"></img></a>
     <div class="sidebar">
         <h3>Read More</h3>
         <a href="News-Article2.html"><img src="News/Images/avalanche-sign-large.jpg"width="200px"height="150px"> </a>
@@ -95,6 +96,9 @@
                         </h2>
                         <audio src="Audio-index.mp3"controls="controls"></audio>
                     <style>
+                        .news-audio{
+                            padding:20px;
+                        }
                     .news-audio h2{
                         width:50%;
                         margin-left:380px;
@@ -104,7 +108,18 @@
                     </style>
                       </div>
         
-        
+                      <svg width="1000" height="1000">
+                        <rect width="500" height="500"
+                        style="fill:#96b7be;stroke-width:0;stroke:#96b7be"/>
+                        <circle cx="250" cy="250" r="250" stroke="#96b7be"
+                                stroke-width="1" fill="white">
+                                    Your browser does not support it!
+                              </circle>
+                              <img id="Logreplace"src="IMG/Login.png"  style="margin-left:-850px;margin-bottom: 640px"/>
+                    
+
+
+
         </article>
         <br>
         <br>
@@ -225,17 +240,51 @@ display: inline-block;
 padding: 0 2rem;
 border-left: .1rem solid black;
 }
+/*****************logo e faqes ****************/
+/*logo e faqes */
+
+#logo {
+  margin-top: -50px;
+  margin-left: 80px;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease;
+}
+#logo:hover{
+    transform: rotate(360deg);
+}
+
+/*logo e faqes */
+
+#logo {
+  margin-top: -100px;
+  margin-right:1300px;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease;
+}
+#logo:hover{
+    transform: rotate(360deg);
+}
+
+/*logo e faqes */
+.heads-up {
+  -webkit-transform: translateY(-6rem);
+          transform: translateY(-6rem);
+  -webkit-transform: translate3d(0,-6rem,0);
+          transform: translate3d(0,-6rem,0);
+}
+
 body{
     text-align: center;
     background-color: #cbdde1;
 }
 #heading{
-    padding:25px;
+    padding:20px;
     font-size:30px;
     color:black;
     width:50%;
     border-bottom:solid 1px;
     margin-left:380px;
+    margin-top:-100px;
 }
 #paragraph{
     font-size:18px;
