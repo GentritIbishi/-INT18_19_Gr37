@@ -302,11 +302,11 @@ color:white;
 .footerf form{
             line-height:34px;
 }
-a:link{
+.footerf a:link{
     color:darkred;
     text-decoration: none;
 }
-a:visited{
+.footerf a:visited{
         color:darkred;
 
 }
