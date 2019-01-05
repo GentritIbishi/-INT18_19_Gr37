@@ -36,7 +36,27 @@
         <h3>Read More</h3>
         <a href="News-Article3.html"><img src="News/Images/moscow-iStock-505694212.jpeg"width="200px"height="150px"> </a>
         <p><a href="News-article3.html">The most in-demand destinations of 2018, according to Google</a>
-
+    <script>
+            function clickCounter()
+            {
+            if(typeof(Storage)!=="undefined")
+              {
+              if (sessionStorage.clickcount)
+                {
+                sessionStorage.clickcount=Number(sessionStorage.clickcount)+1;
+                }
+              else
+                {
+                sessionStorage.clickcount=1;
+                }
+              document.getElementById("result").innerHTML="You have clicked this button " + sessionStorage.clickcount + " times";
+              }
+            else
+              {
+              document.getElementById("result").innerHTML="Sorry, your browser does not support web storage...";
+              }
+            }
+            </script>
     </p>
 </div>
   
@@ -302,7 +322,7 @@ color:#737373;
 
 .sidebar {
   width: 25%;
-  height: 25vh;
+  height: 35vh;
   min-height: 200px;
   overflow: auto;
   position: -webkit-sticky;
