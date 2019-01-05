@@ -8,28 +8,27 @@
     <script src="https://use.fontawesome.com/ea603c10d8.js"></script>
   <!--Kodi per social bar-->
   <div class="wrapper">
-      <div class="container-fluid full-image">
-      </div>
-      <div class="container-fluid nav-color">
-        <div class="row social-bar">
-          <ul class="social-icons">
-            <li><i class="fa fa-facebook" href="https://www.facebook.com/shouryaricky"></i></li>
+    <div class="container-fluid full-image"></div>           
+    <div class="row social-bar">
+        <ul class="social-icons">
+            <li><i class="fa fa-facebook" ></i></li><!--href="https://www.facebook.com/shouryaricky"-->
             <li><i class="fa fa-twitter"></i></li>
             <li><i class="fa fa-instagram"></i></li>
             <li><i class="fa fa-github"></i></li>
-          </ul>
-        </div>
-  <!--Kodi per hederin-->
-  <header class="main-header">
-    <h1>PRISHTINA24</h1>
-    <nav>
-      <ul>
-        <li><a href="Simplicity.html">Homepage</a></li>
-        <li><a href="About-Us/About-us.html">About Us</a></li>
-        <li><a href="Contact-us.html">Contact us</a></li>
-        <li><a href="News/News.html">News</a></li>
-      </ul>
-    </nav>
+        </ul>
+    </div>
+    <!--Kodi per hederin-->
+    <header class="main-header">
+        <nav>
+            <ul>
+                <li><a href="Index.html">Home</a></li>
+                <li><a href="About-Us/About-us.html">About Us</a></li>
+                <li><a href="Contact-us.html">Contact us</a></li>
+                <li><a href="News/News.html">News</a></li>
+                <li><a href="Login.html">Log Out</a></li>      
+            </ul>
+        </nav>
+        <a href="Index.html"><img id="logo" width="200" height="200" src="IMG/Login.png"></img></a>
     </header>
           
           <article>
@@ -97,6 +96,8 @@
         </tr>
       </table>
       </div>
+     
+
     </article>
 <style>
 table, th, td {
@@ -110,6 +111,16 @@ table, th, td {
   margin-left:380px;
 }
 </style>
+
+<svg width="1000" height="1000">
+    <rect width="500" height="500"
+    style="fill:#96b7be;stroke-width:0;stroke:#96b7be"/>
+    <circle cx="250" cy="250" r="250" stroke="#96b7be"
+            stroke-width="1" fill="white">
+                Your browser does not support it!
+          </circle>
+          <img id="Logreplace"src="IMG/Login.png"  style="margin-left:-850px;margin-bottom: 640px"/>
+
 <br>
 <br>
 <br>
@@ -240,6 +251,27 @@ display: inline-block;
 padding: 0 2rem;
 border-left: .1rem solid black;
 }
+/*****************logo e faqes ****************/
+/*logo e faqes */
+
+#logo {
+  margin-top: -100px;
+  margin-right:1300px;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease;
+}
+#logo:hover{
+    transform: rotate(360deg);
+}
+
+/*logo e faqes */
+.heads-up {
+  -webkit-transform: translateY(-6rem);
+          transform: translateY(-6rem);
+  -webkit-transform: translate3d(0,-6rem,0);
+          transform: translate3d(0,-6rem,0);
+}
+
 body{
     text-align:center;
     background-color:#cbdde1;
