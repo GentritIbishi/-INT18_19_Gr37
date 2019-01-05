@@ -151,6 +151,46 @@
       <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2934.610925218774!2d21.164937651207744!3d42.6484075790664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1546616706781" width="760" height="450" frameborder="0" style="border:0" allowfullscreen>
     </iframe></div>
      <!--**********************Kodi per geolokacion*****************************-->
+
+     
+     <h1 id="interesting-fact">An interesting fact about our website</h1>
+     <h1 id="interesting-fact">This was the logo that we intended to use at first</h1>
+
+     <style>
+      #ranking {
+          margin-left: 380px;
+          margin-top: 15px;
+      }
+  </style>
+      <div id="ranking">
+      <h3 style="padding-left: 150px"></h3>
+      <canvas id="kanvas1" width="1000" height="1000">
+          Your browser does not support Canvas!
+      </canvas>
+  <script>
+      /*kanvas1*/
+      var kanvas = document.getElementById("kanvas1");
+      var ktx = kanvas.getContext("2d");
+      var X=75, W=60, G=15,T=50,F=5;
+      ktx.lineWidth = 35;
+      var color = ['#96b7be','#96b7be','#96b7be','#96b7be'];
+      var dimensions = [
+          [X+X+X+X,X+X,W+W],
+          [X+X+X+X,X+X,X],
+          [T+X+X+X+G+F+F,T+G+X+F+F,T],
+          [G+G+X+X+X+G+G+G,G+G+X+G+G+G,G+G]
+            ];
+          while(color.length>0)
+          {
+          ktx.strokeStyle = color.shift();
+          ktx.beginPath();
+          ktx.arc.apply(ktx,dimensions.shift().concat([0,2*Math.PI,true]));
+          ktx.stroke();
+      }
+  </script>
+  </div>
+
+     
 <br>
 <br>
 <br>
