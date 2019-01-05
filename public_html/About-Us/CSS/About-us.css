@@ -303,6 +303,16 @@ width:50%;
   border-bottom:solid 1px;
   border-color:#737373;
 }
+
+#interesting-fact{
+  font-size:25px;
+  color:black;
+  width:50%;
+  margin-left:380px;
+}
+
+
+
 /*Kodi per Copyright*/
 .Copyright {
   height: 40px;
