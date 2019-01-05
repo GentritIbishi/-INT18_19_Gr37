@@ -112,6 +112,26 @@
 body {
   background-color: #f2f2f2;
 }
+/*****************logo e faqes ****************/
+/*logo e faqes */
+
+#logo {
+  margin-top: -50px;
+  margin-left:100px;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease;
+}
+#logo:hover{
+    transform: rotate(360deg);
+}
+
+/*logo e faqes */
+.heads-up {
+  -webkit-transform: translateY(-6rem);
+          transform: translateY(-6rem);
+  -webkit-transform: translate3d(0,-6rem,0);
+          transform: translate3d(0,-6rem,0);
+}
 
 .vertical-social-bar {
   position: fixed;
@@ -235,11 +255,11 @@ margin-right: 50px;
 .footerf form{
           line-height:34px;
 }
-a:link{
+.footerf a:link{
   color:#b30000;
   text-decoration: none;
 }
-a:visited{
+.footerf a:visited{
       color:#b30000;
 
 }
