@@ -154,13 +154,13 @@ text-decoration:none;
 }
 .footerf form{
      line-height:34px;
-    
+
 }
 a:link{
     color:#b30000;
     text-decoration: none;
 }
-a:visited{
+.footerf a:visited{
         color:#b30000;
 
 }
@@ -192,7 +192,7 @@ a:visited{
     margin: 0px 225px 60px 225px;
     padding: 0px 0px 30px 0px;
      border-radius: 5px;
-  
+
 }
 
 .bllok1 h1{
@@ -216,14 +216,14 @@ div img {
 .ul-class li{
     margin: 9px 15px 9px 60px;
     font-size: 20px;
-    
 
-}  
+
+}
 .bllok1 p{
     font-size: 20px;
-   
+
     margin: 0px 15px 9px 15px;
-    
+
 }
 
 .bllok1 strong
